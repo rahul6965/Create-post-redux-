@@ -1,0 +1,179 @@
+/* body{
+    background-color: black;
+} */
+.create-input .input-type-title {
+    color: #e2e8f0;
+    font-size: 1.4rem;
+    font-weight: 600;
+    margin-bottom: 20px;
+    text-align: center;
+    border-bottom: 2px solid rgba(255, 255, 255, 0.1);
+    padding-bottom: 10px;
+}
+
+.create-input .animated-border-input {
+    width: 28vw;
+    padding: 10px 20px;
+    border: 2px solid transparent;
+    border-radius: 12px;
+    background: rgb(255 255 255);
+    color: black;
+    font-size: 16px;
+    outline: none;
+    transition: all 0.3s ease;
+    box-sizing: border-box;
+    position: relative;
+    z-index: 1;
+}
+
+.create-input .animated-border-container {
+    position: relative;
+    margin: 20px 0;
+}
+
+.create-input .animated-border-container::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    border-radius: 12px;
+    padding: 2px;
+    background: linear-gradient(45deg, #ff6b6b, #4ecdc4, #45b7d1, #96ceb4, #ffeaa7);
+    background-size: 300% 300%;
+    animation: gradient-shift 3s ease infinite;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    z-index: -1;
+}
+
+.create-input .animated-border-container::after {
+    content: '';
+    position: absolute;
+    top: 2px;
+    left: 2px;
+    right: 2px;
+    bottom: 2px;
+    border-radius: 10px;
+    background: rgba(45, 55, 72, 0.95);
+    z-index: 0;
+}
+
+.create-input1 {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+button {
+    transition: all 0.4s ease;
+    position: relative;
+    overflow: hidden;
+}
+
+.cus_add {
+    color: white;
+    height: 100%;
+    padding: 6px 23px;
+    font-weight: 600;
+    border: 1px solid white;
+    background: linear-gradient(270deg, red, orange, yellow, green, blue, indigo, violet);
+    background-size: 1400% 1400%;
+    animation: rainbowStripes 5s linear infinite;
+    border-radius: 8px;
+}
+
+@keyframes rainbowStripes {
+    0% {
+        background-position: 0% 50%;
+    }
+
+    100% {
+        background-position: 100% 50%;
+    }
+}
+
+.create-input .animated-border-input:focus {
+    background: rgba(255, 255, 255, 0.08);
+}
+
+.animated-border-container:focus-within::before {
+    opacity: 1;
+}
+
+@keyframes gradient-shift {
+
+    0%,
+    100% {
+        background-position: 0% 50%;
+    }
+
+    50% {
+        background-position: 100% 50%;
+    }
+}
+
+.card-item{
+
+    background: rgba(255, 255, 255, 0.05);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 20px;
+    padding: 2.5rem;
+    color: #fff;
+    position: relative;
+    overflow: hidden;
+    transition: all 0.3s ease;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}
+.card-item::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: radial-gradient(circle at top right, rgba(255, 255, 255, 0.1), transparent);
+    pointer-events: none;
+}
+
+.card_button{
+    display: flex;
+    position: absolute;
+    bottom: 12px;
+}
+
+button.edit {
+    background: green;
+     color: white;
+    font-weight: 600;
+    height: 38px;
+    border-radius: 5px;
+    margin-right: 8px;
+    padding: 0 24px;
+    border: none;
+
+}
+button.delete {
+    background: red;
+      color: white;
+    font-weight: 600;
+    height: 38px;
+    border-radius: 5px;
+    margin-right: 8px;
+    padding: 0 24px;
+    border: none;
+
+}
+
+.id_number{
+    font-size: 13px;
+    font-weight: 600;
+    color: grey;
+}
+h2.title {
+    font-size: 24px;
+}
