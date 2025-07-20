@@ -15,7 +15,7 @@ function App() {
 
           <Routes>
             <Route path='/' element={<Layout />}>
-              <Route index element={<Home />} />
+              <Route index element={<Addcard />} />
               <Route path='/about' element={<About />} />
               <Route path='/creat-post' element={<Addcard />} />
               <Route path='/card-page' element={<Cardpage />} />
